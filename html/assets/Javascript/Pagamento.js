@@ -3,6 +3,8 @@ var pagPrincipal = document.querySelector('#Principal');
     window.location = "../Principal";
 });
 
+
+
 function Cpf(){
     const cpf = document.getElementById('cpf').value;
     if (cpf.length == 0){
