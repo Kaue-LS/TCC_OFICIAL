@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+ }
+ 
+ #center {
+     max-width: 1100px;
+     margin:0 auto;
+     padding: 0 2%;
+     display: flex;
+     flex-wrap: wrap;
+ }
+ 
+ body {
+     margin: 0%;
+     padding: 0%;
+     background-color: #191919; 
+ }
+ 
+ .menu-mobile{
+    display: none;
+}
+
+ #thisheader {
+     position: relative;
+     background-color: #191919;
+     padding: 20px 0;
+ }
+
+/* -----------------------------------------------------------------------------
+    Logo
+----------------------------------------------------------------------------- */
+
+ #logo {
+     color: #ffffff;
+     transition: 0.4s;
+ }
+
+ #logo img{
+     cursor: pointer;
+    font-weight: normal;
+ }
+
+ #logo img:hover{
+     transition: 0.4s;
+     max-width: 205px;
+ }
+
+ #logo img{
+     width: 100%;
+     max-width: 200px;
+ }
+ 
+ #menu{
+     width: 70%;
+     text-align: right;
+ }
+ 
+ #menu a{
+     color: #fff ;
+     font-size: 14px;
+     text-decoration: none;
+     display: inline-block;
+     margin-right: 20px;
+     transition: 0.3s;
+     padding: 10px 0;
+ }
+ 
+ #menu a:hover{
+     color: #01dde9;
+ }
+ 
+ #menu #btn-menu{
+     background-color:#00adb5 ;
+     display: inline-block;
+     padding: 8px 16px;
+     color: white;
+     border-radius: 5px;
+ }
+ 
+ #menu #btn-menu:hover{
+     background-color: #01dde9;
+     color: #414040;
+ }
+
+/* -----------------------------------------------------------------------------
+    Primeira seção - "Está com alguma dúvida ?"
+----------------------------------------------------------------------------- */
+
+.section_main{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/duvida.jpeg");
+    background-position: top center;
+    padding: 50px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+        
+}
+
+.duvida {
+    width: 100%;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.duvida h2{
+    font-size: 30px;
+    color: rgb(238, 236, 236);
+    
+}
+
+.duvida p{
+    color: rgb(238, 236, 236);
+}
+
+/* -----------------------------------------------------------------------------
+    Segunda seção - Problemas
+----------------------------------------------------------------------------- */
+
+
+ .atendimento{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+
+ .main_atd{
+    width: 48%;
+    margin-right: 2%;
+    margin: 10px;
+    padding: 25px 60px;
+    text-align: left;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.main_atd h2{
+    width: 100%;
+    color: #191919;
+    margin-bottom: 10px;
+}
+
+.main_atd textarea{
+    width: 100%;
+    resize: none;
+}
+
+.main_atd input[type = submit]{
+   background-color:#007bff ;
+   display: inline-block;
+   padding: 8px 30px;
+   color: white;
+   text-decoration: none;
+   border: 0;
+   border-radius: 5px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: 0.3s; 
+   margin: 10px 0;
+   width: 100%;
+}
+
+.main_atd input[type = submit]:hover{
+    background-color: #191919;
+    transition: 0.3s;
+    color: white;
+}
+
+ .icone {
+     display: inline-block;
+    font-size: 30px;
+    color: #191919;
+    margin-right: 5px;
+ }
+
+ .main_atd ul{
+     padding: 10px 0;
+     line-height: 30px;
+     font-size: 16px;
+     display: none;
+ }
+
+ .show {
+     display: block;
+ }
+
+
+/* -----------------------------------------------------------------------------
+    Terceira seção - ícones
+----------------------------------------------------------------------------- */
+
+ .diferenciais{
+     display: flex;
+     flex-wrap: wrap;
+     padding: 60px 0;
+ }
+
+ .diferencial-single{
+     width: 23%;
+     margin-right: 2%;
+     margin: 10px;
+     padding: 25px 10px;
+     font-size: 50px;
+     text-align: center;
+    }
+.diferencial-single i{
+    width: 100%;
+    background-color: #00adb5;
+    padding: 20px 0;
+    border-radius: 200px;
+    max-width: 100px;
+    color: #191919;
+    transition: 0.4s;
+}
+
+.diferencial-single i:hover{
+    transition: 0.4s;
+    font-size: 80px;  
+    padding: 60px 0;
+    width: 100%;
+    max-width: 200px;  
+}
+
+.diferencial-single h3{
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: normal;
+    color: #9a9a9a;
+}
+
+.menu-items{
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-bottom: 2px solid #00adb5;
+    display: block;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.menu-items.show{
+    opacity: 1;
+}
+
+.menu-items.hidden{
+    opacity: 0;
+}
+
+.menu-items a{
+    display: block;
+    text-decoration: none;
+    color: #191919;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+a.mobile-home:hover {
+    transition: 0.4s;
+    padding: 5px;
+    background-color: #222329;
+    color: white;
+}
+a.mobile-download:hover {
+    transition: 0.4s;
+    padding: 5px;
+    background-color: #222329;
+    color: white;
+}
+a.mobile-compra:hover {
+    transition: 0.4s;
+    padding: 5px;
+    background-color: #222329;
+    color: white;
+}
+/* -----------------------------------------------------------------------------
+    Responsividade
+----------------------------------------------------------------------------- */
+
+ @media screen and (max-width: 768px){
+    .main_atd{width: 100%;margin-bottom: 20px;}
+
+    #logo{ width: 50%;}
+
+    .menu-mobile{
+        transition: 0.25s;
+        width: 50%;
+        text-align: right;
+        display: block;
+    }
+
+    .menu-mobile i{
+        cursor: pointer;
+        font-size: 23px;
+        margin-top: 8px;
+        color: white;        
+    }
+
+    #menu{display: none}
+
+    .diferencial-single{width: 100%;}
+}
+

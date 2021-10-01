@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../assets/images/icone2021.png" type="image/x-icon">
+    <title>HiddenCript - Central de Atendimento</title><!--titulo-->
+    <script src="https://kit.fontawesome.com/16f3326cf5.js" crossorigin="anonymous"></script><!--icones-->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FONTES -->
+    <link rel="icon" href="../tcc/assets/images/icone2021.png" type="image/x-icon"><!--icone-titulo-->
+    <link rel="stylesheet" href="./../assets/css/estilo_suporte.css"><!--css-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header id="thisheader">
+        <div id="center">
+            <div id="logo">
+                <img id="Principal" src="./../assets/images/logo-hiddencript1.png" alt="">
+            </div><!--logo-->
+            <div id="menu">
+                <a href="#">
+                    Central de Atendimento
+                </a>
+            </div><!--menu-->
+        </div><!--center-->
+    </header><!--thisheader-->
+
+    <!-- PRIMEIRA SEÇÃO -->
+
+    <section class="section_main">
+        <div id="center">
+            <div class="duvida">
+                <h2>Está com alguma dúvida ?</h2>
+                <p>A equipe HiddenCript ajuda você!</p>
+            </div><!--duvida-->
+        </div><!--center-->
+    </section><!--section_main-->
+
+    <!-- SEGUNDA SEÇÃO -->
+
+    <section class="atendimento">
+            <div class="main_atd" id="main-plano" >
+                <h2><strong> </strong><i class="fad fa-comments-alt-dollar icone"></i> Problemas com o plano</h2>
+                <p>Neste setor podemos te ajudar a solucionar problemas com o pagamento!</p>
+            </div><!--main-atd-->
+
+            <div class="main_atd" id="main-pedido" >
+                <h2><i class="fas fa-exchange icone"></i> Alteração do pedido</h2>
+                <p>Neste setor podemos te ajudar a solucionar problemas com seu pedido!</p>
+            </div><!--main-atd-->
+
+            <div class="main_atd" id="main-boleto"> 
+                <h2><i class="fas fa-barcode-read icone"></i> Confirmação de boleto</h2>
+                <p>Neste setor podemos te ajudar a solucionar problemas com a confirmação do boleto!</p>
+            </div><!--main-atd-->
+
+
+            <div class="main_atd" id="main-aprovado">
+                <h2><i class="fab fa-cc-visa icone"></i> Cartão não aprovado</h2>
+                <p>Neste setor podemos te ajudar a solucionar problemas com a aprovação do cartão!</p>
+            </div><!--main-atd-->
+
+
+            <div class="main_atd" id="main-reembolso">
+                <h2><i class="far fa-hand-holding-usd icone"></i> Solicitação de Reembolso</h2>
+                <p>Neste setor podemos te ajudar a solucionar problemas com o reembolso!</p>
+            </div><!--main-atd-->
+
+
+            <div class="main_atd" id="main-outros">
+                <h2><i class="far fa-user-edit icone"></i> Outros</h2>
+                <p>Neste setor podemos te ajudar a solucionar outros tipos de problemas! Daremos nosso melhor!</p>
+            </div><!--main-atd-->
+
+     </section> <!--atendimento-->
+
+     <!-- TERCEIRA SEÇÃO -->
+
+     <section class="diferenciais">
+         <div class="diferencial-single">
+            <i class="fas fa-user-headset"></i>
+            <h3>Suporte 1 a 1.</h3>
+         </div><!--diferencial-single-->
+
+         <div class="diferencial-single">
+            <i class="far fa-hands-usd"></i>
+            <h3>Preço Acessível.</h3>
+         </div><!--diferencial-single-->
+
+         <div class="diferencial-single">
+            <i class="far fa-check"></i>
+            <h3>Acesso Vitalício.</h3>
+         </div><!--diferencial-single-->
+
+         <div class="diferencial-single">
+            <i class="far fa-phone-laptop"></i>
+            <h3>Acesso a partir de qualquer dispositivo.</h3>
+         </div><!--diferencial-single-->
+
+     </section><!--diferenciais-->
+     
+     <script>
+         var pagPrincipal = document.querySelector('#Principal');
+         var mainPlano = document.querySelector('#main-plano');
+         var mainBoleto = document.querySelector('#main-boleto');
+         var mainReembolso = document.querySelector('#main-reembolso');
+         var mainPedido = document.querySelector('#main-pedido');
+         var mainAprovado = document.querySelector('#main-aprovado');
+         var mainOutros = document.querySelector('#main-outros');
+
+            pagPrincipal.addEventListener('click',()=>{
+                window.location = "../Principal";
+            });
+
+            mainPlano.addEventListener('click',()=>{
+                window.location = "../Support/tela_suporte_plano.html";
+            });
+
+            mainBoleto.addEventListener('click',()=>{
+                window.location = "../Support/tela_suporte_boleto.html";
+            });
+
+            mainReembolso.addEventListener('click',()=>{
+                window.location = "../Support/tela_suporte_reembolso.html";
+            });
+
+            mainPedido.addEventListener('click',()=>{
+                window.location = "../Support/tela_suporte_pedido.html";
+            });
+
+            mainAprovado.addEventListener('click',()=>{
+                window.location = "../Support/tela_suporte_aprovado.html";
+            });
+
+            mainOutros.addEventListener('click',()=>{
+                window.location = "../Support/tela_suporte_outros.html";
+            });
+
+
+
+         
+
+         function myFunction() {
+            document.getElementById("ulmain").classList.toggle("show");
+        }
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/Arq.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="../assets/images/icone2021.png" type="image/x-icon"><!--icone-titulo-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/16f3326cf5.js" crossorigin="anonymous"></script>
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+    <title>HiddenCript - Criptografia de Arquivos</title>
+</head>
+<body>
+    <header id="thisheader"><!--header-->
+        <div id="center"><!--center-->
+            <div id="logo"><!--logo-->
+                <img id="Principal" src="./../assets/images/logo-hiddencript1.png" class="img20">
+            </div><!--logo-->
+
+            <div id="menu"><!--menu-->
+                <a href="#"><!--área de download-->
+                    Download
+                </a><!--área de download-->
+
+                <a href="../SupportArea"><!--Suporte-->
+                    Suporte
+                </a><!--Suporte-->
+                <a href="../Principal"><!--Voltar-->
+                    Voltar
+                </a><!--Voltar-->
+
+            
+                </div><!--menu-->
+                
+                <div class="menu-mobile"><!--menu-mobile-->
+                    <i class="fas fa-bars menu-mobile-icon"></i>
+                    <div class="menu-items"><!--menu-items-->
+                        <a href="#">Home</a>
+                        <a href="#">Sobre</a>
+                        <a href="#">Contato</a>
+                    </div><!--menu-items-->
+                </div><!--menu-mobile-->
+            </div><!--center-->
+        </header><!--header-->
+
+    <script>
+        var el = document.querySelector('.menu-mobile-icon');
+        var pagPrincipal = document.querySelector('#Principal');
+
+        pagPrincipal.addEventListener('click', ()=>{
+            window.location = "../Principal";
+        })
+
+        el.addEventListener('click',()=>{
+            var menuitems = document.querySelector('.menu-items');
+            if(menuitems.classList.contains('show')){
+                menuitems.classList.add('hide');
+                menuitems.classList.remove('show');
+            } else {
+                menuitems.classList.add('show');
+                menuitems.classList.remove('hide');
+            }
+            
+        });
+    </script>
+
+    <div class="diferencial">
+        <form action="" id="encrypt_form" class="diferencial-single">
+            <h2><i class="fal fa-folder-open"></i> Insira o arquivo aqui:</h2>
+            <input id="Block1Encrypt" type="file">
+            <input onclick="Encriptar()" type="button" value="Encriptar">
+        </form>
+        <div id="spawn">
+            <div id="error">
+                <span>ERRO!</span>
+                <p><span id="problem"></span></p>
+                <button onclick="fechar()" id='fechar'>Fechar</button>
+                  </div>
+            </div>
+        <form action="" id="decrypt_form" class="diferencial-single">
+            <h2>Inserir para decriptar</h2>
+        <input id="Block1Decrypt" type="file">
+        <input id="Block2Decrypt" type="text" placeholder="Ex: .txt, .exe...">
+        <input onclick="Restaurar()" type="button" value="Decriptar">
+        </form>
+    </div>
+    <script src="../assets/Javascript/Arq.js"></script>
+</body>
+</html>

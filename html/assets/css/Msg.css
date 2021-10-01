@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+ }
+ 
+ #center {
+    max-width: 1100px;
+    margin:0 auto;
+    padding: 0 2%;
+    display: flex;
+    flex-direction: row;
+}
+ 
+ .menu-mobile{
+     display: none;
+ }
+ 
+ 
+ body {
+     margin: 0%;
+     padding: 0%;
+     background-image: linear-gradient(rgba(4, 97, 238, 0.1), rgba(4,97,238,0.1)),  url(../images/banner-home.png);
+     background-position: bottom;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment:fixed;
+ }
+ 
+ 
+ #thisheader {
+     position: relative;
+     background-color: #191919;
+     padding: 20px 0;
+ }
+ 
+ 
+ #logo {
+     display: flex;
+     flex-wrap: wrap;
+     color: #00adb5;
+     font-weight: normal;
+ }
+ 
+ 
+ #logo img{
+     width: 100%;
+     max-width: 100px;
+ }
+ 
+ div#logo > img{
+     max-width: 100%;
+     max-width: 200px;
+     border-radius: 0;
+     cursor: pointer;
+ }
+ 
+ 
+ #menu{
+     width: 80%;
+     text-align: right;
+ }
+ 
+ #menu a{
+     color: #fff ;
+     font-size: 14px;
+     text-decoration: none;
+     display: inline-block;
+     margin-right: 20px;
+     transition: 0.3s;
+ }
+ 
+ #menu a:hover{
+     color: #01dde9;
+ }
+ 
+ #menu {
+     display: inline-block;
+     padding: 8px 16px;
+     color: white;
+     border-radius: 5px;
+ }
+ 
+
+/* SECTION MAIN */
+
+.menu-items{
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-bottom: 2px solid blue;
+    display: block;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.menu-items.show{
+    opacity: 1;
+}
+
+.menu-items.hidden{
+    opacity: 0;
+}
+
+.menu-items a{
+    display: block;
+    text-decoration: none;
+    color: blue;
+}
+/* Operações de encriptar */
+/* ERROR ---------------------------*/
+
+#spawn{
+    background-color: rgb(216, 76, 76);
+    border: red 5px solid;
+    border-radius: 10px;
+    width: 30%;
+    display: none;
+    margin: 2vh 33vw;
+    position: absolute;
+   
+}
+#error{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+#fechar{
+    background-color: rgb(209, 12, 12);
+    border-radius: 10px;
+    color: white;
+    padding: 5px 1px;
+    border: 2px solid red;
+    font-size: 18px;
+    transition: 300ms;
+}
+
+/* ERROR----------------------------------------------------- */
+.diferencial{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.diferencial-single{
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    width: 48%;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.diferencial-single i{
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.diferencial-single textarea{
+    resize: none;
+    max-width: 96%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.diferencial-single input{
+    margin: 10px;
+}
+
+.diferencial-single input[type = button]{
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    border: 0;
+    width: 25%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.diferencial-single input[type = button]:hover{
+    background-color: #191919;
+    color: white;
+    transition: 0.4s;
+    border-radius: 5px;
+    padding: 10px;
+    border: 0;
+    width: 25%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .diferencial-single{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #spawn{
+        width: 50%;
+        margin: 38vh 25vw;
+    }
+
+}
+

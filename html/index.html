@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/estilo_login.css">    
+    <link rel="icon" href="./assets/images/icone2021.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/estilo_login ERROR.css">  
+    <script src="https://kit.fontawesome.com/16f3326cf5.js" crossorigin="anonymous"></script>
+    <!-- Animation Style -->
+    <link rel="stylesheet" href="./assets/css/AnimationStyle.css">
+    <title>HiddenCript - Login</title>
+</head>
+<body>
+    <div id="support">
+        <section class="wrapper">
+            <img src="../assets/images/logo-hiddencript1.png" alt="" srcset="">
+        </section>
+        <form action="" method="POST">
+            <h3>login</h3>
+            <input id="emaill" type="email"  name="email" placeholder="Seu email...">
+            <input id="password" type="password" name="senha" placeholder="Sua senha..."/>
+            <input type="button" name="acao" value="Enviar" onclick="Validacao()"/>
+            <div class="form-senha">
+                <a href="#">Esqueci minha senha</a>
+            </div>
+        </div>
+        </form>
+    <canvas id="target"></canvas>
+    <script>
+        var email = document.getElementById("emaill");
+        var password = document.getElementById("password");
+
+        function Validacao(){
+            if(email.value.length != 0 && password.value.length != 0){
+                document.forms[0].submit()
+            }
+            else{
+                window.alert("Preencha os campos e tente novamente")
+            }
+        }
+
+       
+
+        email.addEventListener('focus',()=>{
+            email.style.borderColor = "#4A5F6A" 
+        });
+        email.addEventListener('blur',()=>{
+            email.style.borderColor = "#ccc" 
+        });
+        password.addEventListener('focus',()=>{
+            password.style.borderColor = "#4A5F6A" 
+        });
+        password.addEventListener('blur',()=>{
+            password.style.borderColor = "#ccc" 
+        });
+    </script>
+    <!-- Animation Scripts -->
+    <script src="./assets/Javascript/AnimationClass.js"></script>
+    <script src="./assets/Javascript/CanvasScript.js"></script>
+</body>
+</html>

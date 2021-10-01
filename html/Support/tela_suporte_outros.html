@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../assets/images/icone2021.png" type="image/x-icon">
+    <title>HiddenCript - Outros</title><!--titulo-->
+    <script src="https://kit.fontawesome.com/16f3326cf5.js" crossorigin="anonymous"></script><!--icones-->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FONTES -->
+    <link rel="icon" href="../tcc/assets/images/icone2021.png" type="image/x-icon"><!--icone-titulo-->
+    <link rel="stylesheet" href="../assets/css/estilo_suporte_outros.css"><!--css-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header id="thisheader">
+        <div id="center">
+            <div id="logo">
+                <img id="Principal" src="../assets/images/logo-hiddencript1.png" alt="">
+            </div><!--logo-->
+            <div id="menu">
+                <a href="#">
+                    Central de Atendimento
+                </a>
+            </div><!--menu-->
+
+            <div class="menu-mobile">
+                <i class="fas fa-bars menu-mobile-icon"></i>
+                <div class="menu-items">
+                    <a class="mobile-home" href="#">Home</a>
+                    <a class="mobile-download" href="#">Download</a>
+                    <a class="mobile-compra" href="#">Comprar chave</a>
+                </div><!--menu-items-->
+            </div><!--menu-mobile-->
+        </div><!--center-->
+    </header><!--thisheader-->
+
+    <!-- PRIMEIRA SEÇÃO -->
+
+    <section class="section_main">
+        <div id="center">
+            <div class="duvida">
+                <h2>Está com alguma dúvida sobre outros assuntos?</h2>
+                <p>A equipe HiddenCript ajuda você!</p>
+            </div><!--duvida-->
+        </div><!--center-->
+    </section><!--section_main-->
+
+    <!-- SEGUNDA SEÇÃO -->
+
+    <section class="atendimento">
+            <div class="main_atd" id="main-plano" >
+                <h2><strong> </strong><i class="far fa-user-edit icone"></i> Problemas com o plano</h2>
+                <textarea class="main-area" id="" cols="400" rows="10"></textarea>
+                <input type="submit" value="Enviar">
+            </div><!--main-atd-->
+
+     </section> <!--atendimento-->
+
+     <!-- TERCEIRA SEÇÃO -->
+
+     <section class="diferenciais">
+         <div class="diferencial-single">
+            <i class="fas fa-user-headset"></i>
+            <h3>Suporte 1 a 1.</h3>
+         </div><!--diferencial-single-->
+
+         <div class="diferencial-single">
+            <i class="far fa-hands-usd"></i>
+            <h3>Preço Acessível.</h3>
+         </div><!--diferencial-single-->
+
+         <div class="diferencial-single">
+            <i class="far fa-check"></i>
+            <h3>Acesso Vitalício.</h3>
+         </div><!--diferencial-single-->
+
+         <div class="diferencial-single">
+            <i class="far fa-phone-laptop"></i>
+            <h3>Acesso a partir de qualquer dispositivo.</h3>
+         </div><!--diferencial-single-->
+
+     </section><!--diferenciais-->
+     
+     <script>
+         var celular = document.querySelector('.menu-mobile-icon');
+         var pagPrincipal = document.querySelector('#Principal');
+
+            pagPrincipal.addEventListener('click',()=>{
+                window.location = "./../Principal";
+            });
+
+            celular.addEventListener('click',()=>{
+                var menuItems = document.querySelector('.menu-items');
+                if (menuItems.classList.contains('show')){
+                    menuItems.classList.add('hide');
+                    menuItems.classList.remove('show');
+                } else{
+                    menuItems.classList.add('show');
+                    menuItems.classList.remove('hide');
+                }
+            });
+
+         function myFunction() {
+            document.getElementById("ulmain").classList.toggle("show");
+        }
+
+        
+
+     </script>
+</body>
+</html>

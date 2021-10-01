@@ -1,0 +1,345 @@
+*{
+   margin: 0;
+   padding: 0; 
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+#center {
+    max-width: 1100px;
+    margin:0 auto;
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+
+#thisheader {
+    position: relative;
+    background-color: #191919;
+    padding: 20px 0;
+}
+
+
+#logo {
+    display: flex;
+    flex-wrap: wrap;
+    color: #00adb5;
+    font-weight: normal;
+}
+
+
+#logo img{
+    width: 100%;
+    max-width: 100px;
+}
+
+div#logo > img{
+    width: 100%;
+    max-width: 200px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+
+#menu{
+    width: 80%;
+    text-align: right;
+}
+
+#menu a{
+    color: #fff ;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+#menu a:hover{
+    color: #01dde9;
+}
+
+#menu #btn-menu{
+    background-color:#00adb5 ;
+    display: inline-block;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 5px;
+}
+
+#menu #btn-menu:hover{
+    background-color: #01dde9;
+    color: #414040;
+}
+
+/*
+Section main
+*/
+
+section.main{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/imagemtcc2021.png");
+    padding: 70px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.main_cta{
+    width: 100%;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.main_cta h2{
+    color: #00adb5;
+    font-size: 40px;
+}
+
+.main_cta p{
+    color: #9a9a9a;
+    font-size: 19px;
+    margin: 10px 0;    
+}
+
+.telaChave{
+        background-color:#007bff ;
+        display: inline-block;
+        padding: 8px 30px;
+        color: white;
+        text-decoration: none;
+        border: 0;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s; 
+}
+
+.telaChave:hover{
+    background-color: #01dde9;
+    color: #414040;
+    transition: 0.3s;  
+}
+
+.diferenciais{
+    display: flex;
+    flex-wrap: wrap;   
+}
+
+.diferencial-single{
+    border-radius: 10px;
+    background-color: #191919;
+    width: 48%;
+    margin-right: 2%;
+    padding: 25px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.diferencial-single:hover{
+    transition: 0.3s;
+    padding: 50px 20px;
+    background-color: #202020;
+    
+}
+
+
+
+.diferencial-single i{
+    color: #00adb5;
+    font-size: 23px;
+
+}
+
+.diferencial-single h2{
+    color: #00adb5;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.diferencial-single p{
+    color: #9a9a9a;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+section.sobre{
+    padding: 80px 0;
+    background-color: #191919;   
+}
+
+.chamada-sobre{
+    width: 100%;
+    text-align: center;
+}
+
+.chamada-sobre h2{
+    color: #00adb5;
+    text-transform: uppercase;    
+}
+
+.chamada-sobre p{
+    font-size: 14px;
+    color: #9a9a9a;
+    margin: 10px 0;
+}
+
+.conteudo-sobre{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteudo-sobre p{
+    width: 45%;
+    margin-right: 5%;
+    padding: 30px 0;
+    color: #9a9a9a;
+}
+.conteudo-sobre span{
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.conteudo-sobre i{
+    color: #00adb5;
+
+}
+
+
+.menu-items{
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-bottom: 2px solid blue;
+    display: block;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.menu-items.show{
+    opacity: 1;
+}
+
+.menu-items.hidden{
+    opacity: 0;
+}
+
+.menu-items a{
+    display: block;
+    text-decoration: none;
+    color: blue;
+}
+
+section.depoimentos {
+    padding: 40px 0;
+    background-color: #191919;
+}
+
+section.depoimentos .depoimentos-chamada{
+    text-align: center;
+    color: #124265;        
+}
+
+.depoimentos-chamada h2{
+    color: #00adb5;
+    text-transform: uppercase;    
+}
+
+.depoimentos-chamada p{
+    color: #9a9a9a;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.wraper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wraper img:hover{
+    transition: 0.9s;
+    max-width: 400px;
+    cursor: pointer;
+}
+
+.wraper .img{
+    width: 16.6%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 0;
+    
+}
+
+div > img{
+    width: 100%;
+    border-radius: 200px;
+    max-width: 100px;
+    transition: 1s;
+    
+}
+
+p.nome{
+    color: #9a9a9a;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    .diferencial-single{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #logo{
+        width: 20%;
+    }
+
+    #menu{
+        display: none;
+    }
+    .menu-mobile{
+        width: 80%;
+        text-align: right;
+        display: block;
+    }
+    .menu-mobile i{
+    cursor: pointer;
+    font-size: 23px;
+    margin-top: 8px;        
+    }
+    .conteudo-sobre p{width:100%; margin:20px 20px;}
+
+    .wraper .img{
+        width: 100%;
+    }
+
+    img{
+        width: 100%;
+        border-radius: 200px;
+        max-width: 300px;
+        
+    }
+}
+
+
+
+

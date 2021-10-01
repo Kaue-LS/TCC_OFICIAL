@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../assets/css/estilo_chave.css">
+    <link rel="icon" href="../assets/images/icone2021.png" type="image/x-icon">    
+    <script src="https://kit.fontawesome.com/16f3326cf5.js" crossorigin="anonymous"></script>
+    <!-- Animation Style -->
+    <link rel="stylesheet" href="./../assets/css/AnimationStyle.css">
+    <title>HiddenCript - Ativação de chave</title>
+</head>
+<body>
+    <div id="support">
+        <section class="wrapper">
+            <img id="Principal" src="../assets/images/logo-hiddencript1.png" alt="" srcset="">
+        </section>
+        <form action="" method="POST">
+            <h3>Ativação da chave</h3>
+            <input id="emaill" class="chave" type="text"  name="chave" placeholder="Insira a chave....">
+            <input type="button" name="acao" value="Confirmar" onclick="Validacao()"/>
+        </div>
+        </form>
+    <canvas id="target"></canvas>
+    <script>
+        function Validacao(){
+            let chave = document.getElementById('emaill');
+            
+            if (chave.value.length == 0){
+                    alert("Preencha o campo corretamente!");
+                    return false;
+                } else {
+                    document.forms[0].submit()
+                }
+            }
+
+        var email = document.getElementById('emaill');
+        var pagPrincipal = document.getElementById('Principal');
+
+        pagPrincipal.addEventListener('click', ()=> {
+            window.location = '../Principal/tela_principal.html'
+        });
+
+        email.addEventListener('focus',()=>{
+            email.style.borderColor = "#4A5F6A" 
+        });
+        email.addEventListener('blur',()=>{
+            email.style.borderColor = "#ccc" 
+        });
+
+        
+    </script>
+    <!-- Animation Scripts -->
+    <script src="./../assets/Javascript/AnimationClass.js"></script>
+    <script src="./../assets/Javascript/CanvasScript.js"></script>
+</body>
+</html>

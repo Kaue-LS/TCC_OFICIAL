@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!--fontes-->
+    <script src="https://kit.fontawesome.com/16f3326cf5.js" crossorigin="anonymous"></script><!--icones-->
+    <link rel="stylesheet" href="./../assets/css/estilo_principal.css">
+    <link rel="icon" href="../assets/images/icone2021.png" type="image/x-icon">
+    <title>HiddenCript</title>
+</head>
+<body>
+    <header id="thisheader"><!--header-->
+        <div id="center"><!--center-->
+            <div id="logo"><!--logo-->
+                <img id="Principal" src="../assets/images/logo-hiddencript1.png" class="img20" loading="lazy">
+            </div><!--logo-->
+
+            <div id="menu"><!--menu-->
+                <a href="#"><!--área de download-->
+                    Download
+                </a><!--área de download-->
+
+                <a href="../SupportArea"><!--Suporte-->
+                    Suporte
+                </a><!--Suporte-->
+
+                <a id="btn-menu" href="../KeyActions/tela_pagamento.php"><!--botão comprar a chave-->
+                    Comprar chave
+                </a><!--botão comprar a chave-->
+
+                </div><!--menu-->
+                
+                <div class="menu-mobile"><!--menu-mobile-->
+                    <i class="fas fa-bars menu-mobile-icon"></i>
+                    <div class="menu-items"><!--menu-items-->
+                        <a href="#">Home</a>
+                        <a href="#">Sobre</a>
+                        <a href="#">Contato</a>
+                    </div><!--menu-items-->
+                </div><!--menu-mobile-->
+            </div><!--center-->
+        </header><!--header-->
+
+        <section class="main"><!--main-->
+            <div id="center"><!--center-->
+                <div class="main_cta"><!--main-cta-->
+                    <h2>ATIVAÇÃO DE CHAVE</h2>
+                    <p>Mandaremos em alguns instantes! </p>
+                    <a class="telaChave" href="../KeyActions/tela_chave.php">Ativar</a>
+                </div><!--main-cta-->
+
+                <div class="diferenciais" ><!--diferenciais-->
+                    <div class="diferencial-single" id="diferencialMensagem"><!--diferencial-single-->
+                        <i class="far fa-comments"></i>
+                        <h2>Criptografia de Mensagens</h2>
+                        <p>Usando este incrível serviço, você poderá criar mensagens criptografadas e até mesmo convertê-las.</p>
+                    </div><!--diferencial-single-->
+
+                    <div class="diferencial-single" id="diferencialArquivos"><!--diferencial-single-->
+                        <i class="far fa-folder"></i>
+                        <h2>Criptografia de Arquivos</h2>
+                        <p>Nessa área, apenas criptografaremos ou mesmo converteremos arquivos, onde o cliente poderá escolher a extensão a ser salva.</p>
+                    </div><!--diferencial-single-->
+                </div><!--diferenciais-->
+
+            </div><!--center-->
+        </section><!--main-->
+
+        <section class="sobre">
+            <div id="center">
+                <div class="chamada-sobre">
+                    <h2>Sobre nós</h2>
+                </div><!--chamada-sobre-->
+
+                <div class="conteudo-sobre">
+                    <p>Nós da empresa HiddenCript Corporation, composto pelos integrantes José Guilherme, Kauê Leite, Lucas Matheus, Matheus Vicensoti, Rian Porfírio e Rômulo Moraes. Dessa forma, tivemos a ideia de desenvolvermos uma nova criptografia para leigos e até para empresas com o intuito de preservar dados sigilosos contra ataques cibernéticos. Além disso, somos estudantes da Etec - Ilha Solteira e fundadores da nossa própria empresa. Portanto, apresentamos a todos o Hiddencript.
+                    </p>
+                    <p>
+                        <span><i class="fab fa-whatsapp"></i> (18)99875-2039<br/></span>
+                        <span><i class="far fa-envelope"></i> atendimento@hiddencript.com<br/></span>
+                    </p>
+                </div><!--conteudo-sobre-->
+            </div><!--center-->
+        </section><!--sobre-->
+
+        <section class="depoimentos"><!--depoimentos-->
+            <div class="center">
+                <div class="depoimentos-chamada">
+                    <h2>Contribuição</h2>
+                    <p>Contribuidores do desenvolvimento do HiddenCript.</p>
+                </div>
+            </div>
+            <div class="wraper">
+                <div class="img">
+                    <img src="./../assets/images/romulo.png" alt="">
+                    <p class="nome">Rômulo Moraes</p>
+                </div>
+                <div class="img">
+                    <img src="./../assets/images/matheus.jpeg" alt="">
+                    <p class="nome">Matheus Vicensoti</p>
+                </div>
+                <div class="img">
+                    <img src="./../assets/images/kaue.jfif" alt="">
+                    <p class="nome">Kauê Leite</p>
+                </div>
+                <div class="img">
+                    <img src="./../assets/images/lucas.png" alt="">
+                    <p class="nome">Lucas Matheus</p>
+                </div>
+                <div class="img">
+                    <img src="./../assets/images/rian.jfif" alt="">
+                    <p class="nome">Rian Porfírio</p>
+                </div>
+                <div class="img">
+                    <img src="./../assets/images/josВ.jfif" alt="">
+                    <p class="nome" >José Guilherme</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script>
+            var el = document.querySelector('.menu-mobile-icon');
+            var msg = document.querySelector('#diferencialMensagem');
+            var arq = document.querySelector('#diferencialArquivos');
+            var pagPrincipal = document.querySelector('#Principal');
+
+            pagPrincipal.addEventListener('click',()=>{
+                window.location = "../Principal";
+            });
+    
+            msg.addEventListener('click',()=>{
+                window.location = "../EncodeDecode/Msg.php";
+            });
+
+            arq.addEventListener('click',()=>{
+                window.location = "../EncodeDecode/Arq.php";
+            });
+
+            el.addEventListener('click',()=>{
+                var menuitems = document.querySelector('.menu-items');
+                if(menuitems.classList.contains('show')){
+                    menuitems.classList.add('hide');
+                    menuitems.classList.remove('show');
+                } else {
+                    menuitems.classList.add('show');
+                    menuitems.classList.remove('hide');
+                }
+                
+            });
+
+        </script>
+</body>
+</html>

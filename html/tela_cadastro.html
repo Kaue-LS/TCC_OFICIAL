@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- FONTES -->
+    <link rel="stylesheet" href="assets/css/estilo_cadastro.css"> <!--style-->   
+    <script src="https://kit.fontawesome.com/16f3326cf5.js" crossorigin="anonymous"></script> <!--icones-->
+    <!-- Animation Style -->
+    <link rel="stylesheet" href="./assets/css/AnimationStyle.css">
+    <link rel="icon" href="./assets/images/icone2021.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/estilo_login ERROR.css">   
+    <title>HiddenCript - Cadastro</title>
+</head>
+<body>
+    <div id="support">
+        <canvas id="target"></canvas>
+        <section class="wrapper"><!--logo-->
+            <img src="../assets/images/logo-hiddencript1.png" alt="" srcset="">
+        </section><!--logo-->
+        <form method="POST" action=""><!--form do login-->
+            <h3>cadastro</h3>
+            <input id="textt" type="text"  name="text" placeholder="Seu nome de usuário..." minlength="8" maxlength="120"><!--nome de usuário-->
+            <input id="emaill" type="email"  name="email" placeholder="Seu email..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><!--email-->
+            <input id="password" type="password" name="senha" placeholder="Sua senha..."/><!--senha-->
+            <input id="passwordn" type="password" name="senhanovamente" placeholder="Sua senha novamente..." /><!--digitar a senha novamente-->
+            
+            <!-- PAÍS -->
+            
+            <label >Selecione seu país: </label>
+            <select name="country" id="paises"><!--country-->
+                <option value="" hidden ></option>  
+                <option value="brasil">Brasil</option>
+                <option value="eua">Estados Unidos</option>
+            </select><!--country-->
+            <br>
+    
+            <!-- ESTADO -->
+    
+            <label for="">Selecione seu estado: </label>
+            <select name="state" id="estados"><!--estado-->
+                <option value="" hidden ></option>  
+                <option value="saopaulo">São Paulo</option>
+                <option value="matogrosso">Mato Grosso</option>
+                <option value="matogrossods">Mato Grosso do Sul</option>
+            </select><!--estado-->
+            <br>
+    
+            <!-- CIDADE -->
+    
+            <label for="">Selecione sua cidade: </label>
+            <select name="city" id="cidades"><!--cidade-->
+                <option value="" hidden ></option>  
+                <option value="pereira">Pereira Barretp</option>
+                <option value="ilhasolteira">Ilha Solteira</option>
+                <option value="itapura">Itapura</option>
+            </select><!--cidade-->
+            <br>
+    
+            <!-- TELEFONE -->
+    
+            <input type="tel" name="" id="" placeholder="DDD + seu telefone..." minlength="13" maxlength="13" pattern="[0-9]+$"><!--telefone-->
+            <input type="button" value="Enviar" name="acao" onclick="Validacao()"/><!--botão Enviar-->
+        </form><!--form do login-->
+    </div>
+
+    <script>
+        function Validacao(){
+            let usuario = document.getElementById('textt');
+            let email = document.getElementById('emaill');
+            let senha = document.getElementById('password');
+            let novSenha = document.getElementById('passwordn');
+            let cidade = document.getElementById('cidades');
+            let pais = document.getElementById('paises');
+            let estado = document.getElementById('estados');
+            
+            if (usuario.value.length == 0 && 
+                email.value.length == 0 &&
+                senha.value.length == 0 &&
+                novSenha.value.length == 0 &&
+                cidade.value.length == 0 &&
+                pais.value.length == 0 &&
+                estado.value.length == 0){
+                    alert("Preencha todos os campos corretamente!");
+                    return false;
+                } else {
+                   document.forms[0].submit()
+                }
+            }
+
+        function User(){
+            let usuario = document.getElementById('textt');
+            while (usuario.value.length == 0){
+                alert("Preencha o campo Usuario corretamente!");
+                return false;
+            }
+        }
+
+        function Email(){
+        let email = document.getElementById('emaill');
+            if(email.value.length == 0 || email.value.indexOf('@')==-1 || email.value.indexOf('.')==-1 ) {
+                alert("Preencha o campo Email corretamente!")
+                return false;
+        }
+    }
+
+        function Senha(){
+        let password = document.getElementById('password');
+            if(password.value == 0){
+            alert("Preencha o campo Senha corretamente!");
+            return false;
+        }
+    }
+
+        function Novamente(){
+            let novSenha = document.getElementById('passwordn');
+            let senha = document.getElementById('password');
+            if(novSenha.value.length < 8){
+                alert("É necessario preencher o campo Senha com até 8 caracteres.");
+                return false;
+            } if( novSenha.value !== senha.value ){
+                alert("Senhas incorretas");
+            }
+        }
+
+        function Cidades(){
+            let cidade = document.getElementById('cidades');
+            if (cidade.value.length == 0){
+                alert("Selecione uma cidade!");
+                return false;
+            }
+        }
+
+        function Country(){
+            let pais = document.getElementById('paises');
+            if(pais.value.length == 0){
+                alert("Selecione um país!");
+                return false;
+            }
+        }
+
+        function Estados(){
+            let estado = document.getElementById('estados');
+            if(estado.value.length == 0){
+                alert("Selecione um estado!");
+                return false;
+            }
+        }
+
+        email.addEventListener('focus',()=>{
+            email.style.borderColor = "#4A5F6A" 
+        });
+        email.addEventListener('blur',()=>{
+            email.style.borderColor = "#ccc" 
+        });
+        password.addEventListener('focus',()=>{
+            password.style.borderColor = "#4A5F6A" 
+        });
+        password.addEventListener('blur',()=>{
+            password.style.borderColor = "#ccc" 
+        });
+        passwordnova.addEventListener('focus',()=>{
+            passwordnova.style.borderColor = "#4A5F6A" 
+        });
+        passwordnova.addEventListener('blur',()=>{
+            passwordnova.style.borderColor = "#ccc" 
+        });
+
+    </script>  
+    <!-- Animation Scripts -->
+    <script src="./assets/Javascript/AnimationClass.js"></script>
+    <script src="./assets/Javascript/CanvasScript.js"></script>
+</body>
+</html>
