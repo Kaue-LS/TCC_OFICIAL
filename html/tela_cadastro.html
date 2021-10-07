@@ -64,7 +64,7 @@
     
             <!-- TELEFONE -->
     
-            <input type="tel" name="" id="tel" placeholder="DDD + seu telefone..." minlength="13" maxlength="13" pattern="[0-9]+$"><!--telefone-->
+            <input type="tel" name="" id="tel" placeholder="DDD + seu telefone..."  maxlength="15" ><!--telefone-->
             <input type="button" value="Enviar" name="acao" onclick="Validacao()"/><!--botão Enviar-->
         </form><!--form do login-->
     </div>
@@ -113,7 +113,7 @@
           else if(estado.length==0){
               alert('Selecione seu estado!')
           }
-          else if(telefone===0){
+          else if(telefone.length===0){
             alert("Preenche o telefone!")
           }
           else{
@@ -133,7 +133,8 @@
             //     }
             }
 
- function mascara(o,f){
+/* Máscaras ER */
+function mascara(o,f){
     v_obj=o
     v_fun=f
     setTimeout("execmascara()",1)
