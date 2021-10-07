@@ -27,8 +27,8 @@
             <h3>cadastro</h3>
             <input id="textt" type="text"  name="text" placeholder="Seu nome de usuário..." minlength="8" maxlength="120"><!--nome de usuário-->
             <input id="emaill" type="email"  name="email" placeholder="Seu email..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><!--email-->
-            <input id="password" type="password" name="senha" placeholder="Sua senha..."/><!--senha-->
-            <input id="passwordn" type="password" name="senhanovamente" placeholder="Sua senha novamente..." /><!--digitar a senha novamente-->
+            <input id="password" type="password" name="senha" placeholder="Sua senha..." maxlength="9"/><!--senha-->
+            <input id="passwordn" type="password" name="senhanovamente" placeholder="Sua senha novamente..." maxlength="9" /><!--digitar a senha novamente-->
             
             <!-- PAÍS -->
             
@@ -64,93 +64,97 @@
     
             <!-- TELEFONE -->
     
-            <input type="tel" name="" id="" placeholder="DDD + seu telefone..." minlength="13" maxlength="13" pattern="[0-9]+$"><!--telefone-->
+            <input type="tel" name="" id="tel" placeholder="DDD + seu telefone..." minlength="13" maxlength="13" pattern="[0-9]+$"><!--telefone-->
             <input type="button" value="Enviar" name="acao" onclick="Validacao()"/><!--botão Enviar-->
         </form><!--form do login-->
     </div>
 
     <script>
         function Validacao(){
-            let usuario = document.getElementById('textt');
-            let email = document.getElementById('emaill');
-            let senha = document.getElementById('password');
-            let novSenha = document.getElementById('passwordn');
-            let cidade = document.getElementById('cidades');
-            let pais = document.getElementById('paises');
-            let estado = document.getElementById('estados');
-            
-            if (usuario.value.length == 0 && 
-                email.value.length == 0 &&
-                senha.value.length == 0 &&
-                novSenha.value.length == 0 &&
-                cidade.value.length == 0 &&
-                pais.value.length == 0 &&
-                estado.value.length == 0){
-                    alert("Preencha todos os campos corretamente!");
-                    return false;
-                } else {
-                   document.forms[0].submit()
-                }
+            let usuario = document.getElementById('textt').value
+
+            let email = document.getElementById('emaill').value;
+            let senha = document.getElementById('password').value;
+            let novSenha = document.getElementById('passwordn').value;
+            let cidade = document.getElementById('cidades').value;
+            let pais = document.getElementById('paises').value;
+            let estado = document.getElementById('estados').value;
+            let telefone = document.getElementById('tel').value;
+
+        
+          if(usuario.length==0 ){
+              alert('Prenche o seu nome!')
+          }  
+          else if(email.length==0){
+              alert('Preenche o E-mail!')
+              
+          }
+          else if(!email.match(/[@]/)){
+                alert('Preenche o E-mail corretamente!')
+              }
+          else if(senha.length==0 || senha.length<7 ){
+            alert('Senha inválida')
+          }
+          else if(novSenha.length==0){
+            alert('Preenche o digite novamente sua senha!')
+
+          }
+          else if( senha!='' && novSenha!='' &&novSenha!==senha){
+            alert('Senha diferentes!')
+
+          }
+           else if(pais.length==0){
+              alert('Selecione seu Pais!')
+          }
+          else if(cidade.length==0){
+              alert('Selecione sua cidade!')
+          }
+       
+          else if(estado.length==0){
+              alert('Selecione seu estado!')
+          }
+          else if(telefone===0){
+            alert("Preenche o telefone!")
+          }
+          else{
+             document.forms[0].submit()
+          }
+            // if (usuario.value.length == 0 && 
+            //     email.value.length == 0 &&
+            //     senha.value.length == 0 &&
+            //     novSenha.value.length == 0 &&
+            //     cidade.value.length == 0 &&
+            //     pais.value.length == 0 &&
+            //     estado.value.length == 0){
+            //         alert("Preencha todos os campos corretamente!");
+            //         return false;
+            //     } else {
+            //        document.forms[0].submit()
+            //     }
             }
 
-        function User(){
-            let usuario = document.getElementById('textt');
-            while (usuario.value.length == 0){
-                alert("Preencha o campo Usuario corretamente!");
-                return false;
-            }
-        }
-
-        function Email(){
-        let email = document.getElementById('emaill');
-            if(email.value.length == 0 || email.value.indexOf('@')==-1 || email.value.indexOf('.')==-1 ) {
-                alert("Preencha o campo Email corretamente!")
-                return false;
-        }
-    }
-
-        function Senha(){
-        let password = document.getElementById('password');
-            if(password.value == 0){
-            alert("Preencha o campo Senha corretamente!");
-            return false;
-        }
-    }
-
-        function Novamente(){
-            let novSenha = document.getElementById('passwordn');
-            let senha = document.getElementById('password');
-            if(novSenha.value.length < 8){
-                alert("É necessario preencher o campo Senha com até 8 caracteres.");
-                return false;
-            } if( novSenha.value !== senha.value ){
-                alert("Senhas incorretas");
-            }
-        }
-
-        function Cidades(){
-            let cidade = document.getElementById('cidades');
-            if (cidade.value.length == 0){
-                alert("Selecione uma cidade!");
-                return false;
-            }
-        }
-
-        function Country(){
-            let pais = document.getElementById('paises');
-            if(pais.value.length == 0){
-                alert("Selecione um país!");
-                return false;
-            }
-        }
-
-        function Estados(){
-            let estado = document.getElementById('estados');
-            if(estado.value.length == 0){
-                alert("Selecione um estado!");
-                return false;
-            }
-        }
+ function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('tel').onkeyup = function(){
+		mascara( this, mtel );
+	}
+}
 
         email.addEventListener('focus',()=>{
             email.style.borderColor = "#4A5F6A" 
