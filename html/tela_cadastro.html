@@ -61,7 +61,7 @@
                 <option value="itapura">Itapura</option>
             </select><!--cidade-->
             <br>
-    
+            <input  id="cpf" class="input-main-cpf" type="text"  name="textoNumero" maxlength="14" placeholder="CPF... 69756666505">
             <!-- TELEFONE -->
     
             <input type="tel" name="" id="tel" placeholder="DDD + seu telefone..."  maxlength="15" ><!--telefone-->
@@ -80,7 +80,7 @@
             let pais = document.getElementById('paises').value;
             let estado = document.getElementById('estados').value;
             let telefone = document.getElementById('tel').value;
-
+            let cpf =document.getElementById('cpf').value
         
           if(usuario.length==0 ){
               alert('Prenche o seu nome!')
@@ -113,33 +113,28 @@
           else if(estado.length==0){
               alert('Selecione seu estado!')
           }
+          else if(cpf.length==0){
+              alert('Preenche o seu CPF!!')
+          }
+          else if(cpf.length>0 && cpf.length<14){
+              alert('Preenche o CPF corretamente!')
+          }
           else if(telefone.length===0){
             alert("Preenche o telefone!")
           }
           else{
              document.forms[0].submit()
           }
-            // if (usuario.value.length == 0 && 
-            //     email.value.length == 0 &&
-            //     senha.value.length == 0 &&
-            //     novSenha.value.length == 0 &&
-            //     cidade.value.length == 0 &&
-            //     pais.value.length == 0 &&
-            //     estado.value.length == 0){
-            //         alert("Preencha todos os campos corretamente!");
-            //         return false;
-            //     } else {
-            //        document.forms[0].submit()
-            //     }
+        
             }
 
 /* Máscaras ER */
-function mascara(o,f){
+function mascaraTel(o,f){
     v_obj=o
     v_fun=f
-    setTimeout("execmascara()",1)
+    setTimeout("execmascaraTel()",1)
 }
-function execmascara(){
+function execmascaraTel(){
     v_obj.value=v_fun(v_obj.value)
 }
 function mtel(v){
@@ -148,12 +143,34 @@ function mtel(v){
     v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
     return v;
 }
-function id( el ){
+
+
+
+function mascaraCpf(o,f){
+    v_objj=o
+    v_funn=f
+    setTimeout("execmascaraCpf()",1)
+}
+function execmascaraCpf(){
+    v_objj.value=v_funn(v_objj.value)
+}
+function mcpf(v){
+    v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+    v=v.replace(/(\d{3})(\d)/,"$1.$2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d{3})(\d)/,"$1.$2");
+    v=v.replace(/(\d{3})(\d{1,2})/,"$1-$2");
+    v=v.replace(/(-\d{2})(\d+?$)/,"$1"); //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function idd( el ){
 	return document.getElementById( el );
 }
 window.onload = function(){
-	id('tel').onkeyup = function(){
-		mascara( this, mtel );
+	idd('cpf').onkeyup = function(){
+		mascaraCpf( this, mcpf );
+	}
+    idd('tel').onkeyup = function(){
+		mascaraTel( this, mtel );
 	}
 }
 

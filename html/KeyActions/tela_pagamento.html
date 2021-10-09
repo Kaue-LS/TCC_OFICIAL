@@ -63,12 +63,11 @@
                 <form class="main_form" method="POST" action="">
                 <i class="fab fa-cc-visa visaForm"></i><i class="fab fa-cc-amazon-pay amazonForm"></i><i class="fab fa-cc-mastercard masterForm"></i><i class="fab fa-cc-jcb jcbForm"></i>
                 <h2>Cartão de crédito</h2>
-                <input id="cartao" class="input-main" type="text" name="textoNumero" maxlength="19" placeholder="4444-4444-4444-4444" pattern="[0-9]+$">
-                <input id="cpf" class="input-main-cpf" type="text" name="textoNumero" maxlength="11" placeholder="CPF... 69756666505" pattern="[0-9]+$">
+                <input id="cartao" class="input-main" type="text" name="textoNumero" maxlength="19" placeholder="4444-4444-4444-4444" >
                 <input id="cvc" class="input-main-cvc" type="text" name="textoSeg" maxlength="3" placeholder="CVC" pattern="[0-9]+$">
                 <input id="nome" class="input-main-nome" type="text" name="textoNúmero" placeholder="Nome completo..." >
                 <input id="data" class="input-main-data" type="text" name="textoSeg" maxlength="5" placeholder="DD/YY" >
-                <input type="button" value="Comprar" onclick="exValidacao(), Cpf(), Numero(), Seguranca(), exDate()" >  
+                <input type="button" value="Comprar" onclick="Validar()" >  
             </form>
             </div>
         </section>

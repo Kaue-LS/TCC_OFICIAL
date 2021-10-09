@@ -1,58 +1,109 @@
+
+
+
+
+
 var pagPrincipal = document.querySelector('#Principal');
     pagPrincipal.addEventListener('click',()=>{
     window.location = "../Principal";
 });
 
 
-
-function Cpf(){
-    const cpf = document.getElementById('cpf').value;
-    if (cpf.length == 0){
-        alert("CPF inválido");
-        return false
+function Validar(){
+    let cartao=document.getElementById('cartao').value
+    let cvc = document.getElementById('cvc').value
+    let nome = document.getElementById('nome').value
+    let data=document.getElementById("data").value
+    if(cartao.length==0){
+        alert('Preenche o cartão!')
     }
-}
-
-function Numero(){
-    const cartao= document.getElementById('cartao').value
-    while(cartao.length < 16){
-        alert("Número de cartão inválido");
-        return cartao.length = 16;
+    else if(cartao.length>0 && cartao.length<19){
+        alert("Preenche o cartão corretamente!")
     }
-}
-
-function Seguranca(){
-    const cvc= document.getElementById("cvc").value
-    while(cvc.length < 3){
-        alert("CVC inválido");
-        return cvc.length = 3;
+    else if(cvc.length==0){
+        alert("Preenche o CVC!")
+    }
+    else if(cvc.length>0 && cvc.length<3){
+        alert('Preenche o CVC corretamente!')
+    }
+    else if(nome==0){
+        alert("Preenche o seu nome!")
+    }
+    else if(data.length==0){
+        alert('Preenche a data!')
+    }
+    else if(data.length>0 && data.length<5){
+        alert('Preenche a data corretamente!')
     }
 
-}
-
-function exDate(){
-    const expedicao = document.getElementById('data').value
-    expedicao instanceof Date && !isNaN(expedicao);
-    while (expedicao.length < 5){
-        alert("Data de expedição inválida");
-        return expedicao.length = 5; 
-    }
-}
-
-function exValidacao(){
-    const cartao = document.getElementById('cartao');
-    const expedicao = document.getElementById('data');
-    const cvc = document.getElementById('cvc');
-    const cpf = document.getElementById('cpf');
-    if (cartao.value.length == 0 && expedicao.value.length == 0 &&  cvc.value.length == 0 && cpf.value.length == 0){
-        alert("Preencha todos os campos corretamente!");
-    } else{
-        document.forms[0].submit();
-
-    }
-    
 }
 
 
 
+// Mascara do cartao
+function mascaraCartao(o,f){
+    v_objj=o
+    v_funn=f
+    setTimeout("execmascaraCartao()",1)
+}
+function execmascaraCartao(){
+    v_objj.value=v_funn(v_objj.value)
+}
+function mcartao(v){
+    v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+    v=v.replace(/(\d{4})(\d)/,"$1-$2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d{4})(\d)/,"$1-$2");
+    v=v.replace(/(\d{4})(\d)/,"$1-$2");
+    v=v.replace(/(\d{4})(\d+?$)/,"$1"); //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+
+// Mascara do CVC
+function mascaraCvc(o,f){
+    v_objj=o
+    v_funn=f
+    setTimeout("execmascaraCvc()",1)
+}
+function execmascaraCvc(){
+    v_objj.value=v_funn(v_objj.value)
+}
+
+
+function mcvc(v){
+    v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+  //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+// Mascara da Data
+function mascaraDate(o,f){
+    v_objj=o
+    v_funn=f
+    setTimeout("execmascaraDate()",1)
+}
+function execmascaraDate(){
+    v_objj.value=v_funn(v_objj.value)
+}
+function mdate(v){
+    return v
+    .replace(/\D/g, "")
+    .replace(/(\d{2})(\d)/, "$1/$2")
+}
+
+// ==============================
+
+function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('cartao').onkeyup = function(){
+		mascaraCartao( this, mcartao );
+	}
+    id('cvc').onkeyup = function(){
+		mascaraCvc( this, mcvc );
+	}
+    id('data').onkeyup = function(){
+		mascaraDate( this, mdate );
+	}
+  
+}
 
