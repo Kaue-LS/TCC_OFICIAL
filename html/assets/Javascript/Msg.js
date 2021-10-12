@@ -1,3 +1,4 @@
+var actionResult = document.getElementById("Block2")
 function Decriptar(){
     const data=document.getElementById("Block1").value
     if(data.length===0){
@@ -13,7 +14,7 @@ function Decriptar(){
             }
         }).then((Response) => {
             Response.text().then((Text) => {
-                window.alert(Text);
+                actionResult.innerText = Text;
             })
         });
     }    
@@ -34,7 +35,7 @@ function Encriptar(){
             }
         }).then((Response) => {
             Response.text().then((Text) => {
-                window.alert(Text);
+                actionResult.innerText = Text
             })
         });
     }
