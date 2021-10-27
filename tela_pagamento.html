@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiddenCript - Pagamento</title>
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!--fontes-->
+    <script src="https://kit.fontawesome.com/16f3326cf5.js" crossorigin="anonymous"></script><!--icones-->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+    <link rel="icon" href="../assets/images/icone2021.png" type="image/x-icon">
+    <link rel="stylesheet" href="./../assets/css/estilo_pagamento.css">
+</head>
+<body>
+    <header id="thisheader"><!--header-->
+        <div id="center"><!--center-->
+            <div id="logo"><!--logo-->
+                <img id="Principal" src="../assets/images/logo-hiddencript1.png" class="img20">
+            </div><!--logo-->
+
+            <div id="menu"><!--menu-->
+                <a href="#"><!--área de download-->
+                    Download
+                </a><!--área de download-->
+
+                <a href="../SupportArea"><!--Suporte-->
+                    Suporte
+                </a><!--Suporte-->
+
+                <a id="btn-menu" href="./tela_chave.html"><!--botão para ativar chave-->
+                    Ativar chave
+                </a><!--botão para ativar chave-->
+
+                </div><!--menu-->
+                
+                <div class="menu-mobile"><!--menu-mobile-->
+                    <i class="fas fa-bars menu-mobile-icon"></i>
+                    <div class="menu-items"><!--menu-items-->
+                        <a class="mobile-home" href="#">Home</a>
+                        <a class="mobile-download" href="#">Sobre</a>
+                        <a class="mobile-compra" href="#">Contato</a>
+                    </div><!--menu-items-->
+                </div><!--menu-mobile-->
+            </div><!--center-->
+        </header><!--header-->
+
+</div>
+
+        <section class="main">
+                <div class="main_pag">
+                    <div class="diferencial-plano">
+                        <div class="diferenciais-plano">
+                            <h2>Plano Mensal</h2>
+                            <p>KJDSALKFJDFLKDSJLFKSDFLKJ</p>
+                        </div>
+                        <div class="diferenciais-plano">
+                                <h2>Plano Anual</h2>
+                            </div>  
+                    </div>  
+                    </form>
+                    </div>
+        </section>
+        <section class="main">
+            <div id="popup">
+                <div>
+                    <h3>Pagamento realizado com êxito</h3>
+                    <p>Sua chave: <span id="key"></span></p>
+                    <h4>Sugerimos que mantenha esse código confidencial.</h4>
+                    <a href="../Principal/tela_principal.html"><button>Entendi</button></a>
+                </div>
+            </div>
+            <div class="main_pag">
+                <form class="main_form" method="POST" action="">
+                <i class="fab fa-cc-visa visaForm"></i><i class="fab fa-cc-amazon-pay amazonForm"></i><i class="fab fa-cc-mastercard masterForm"></i><i class="fab fa-cc-jcb jcbForm"></i>
+                <h2>Cartão de crédito</h2>
+                <input id="cartao" class="input-main" type="text" name="textoNumero" maxlength="19" placeholder="4444-4444-4444-4444" >
+                <input id="cvc" class="input-main-cvc" type="text" name="textoSeg" maxlength="3" placeholder="CVC" pattern="[0-9]+$">
+                <input id="nome" class="input-main-nome" type="text" name="textoNúmero" placeholder="Nome completo..." >
+                <input id="data" class="input-main-data" type="text" name="textoSeg" maxlength="5" placeholder="DD/YY" >
+                <input type="button" value="Comprar" onclick="Validar()" >  
+            </form>
+            </div>
+        </section>
+
+            <div class="diferenciais">
+                <div class="diferencial-single ">
+                    <i class="far fa-arrow-alt-to-bottom downForm"></i>
+                    <h2>+1 mil Downloads</h2>
+                </div>
+                <div class="diferencial-single">
+                    <i class="fas fa-star estrela"></i><i class="fas fa-star estrela"></i><i class="fas fa-star estrela"></i></i><i class="fas fa-star estrela"></i><i class="fas fa-star-half-alt estrela"></i>
+                    <h2>+150 Avaliações</h2>
+                </div>
+                <div class="diferencial-single">
+                    <i class="far fa-user-shield cadastrados"></i>
+                    <h2>+ 10 mil Cadastrados</h2>
+                </div>
+            </div>
+            <script src="../assets/Javascript/Pagamento.js"></script>
+</body>
+</html>
