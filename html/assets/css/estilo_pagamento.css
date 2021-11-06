@@ -145,9 +145,49 @@ div#logo > img{
     background-attachment: fixed;
     display: flex;
     flex-wrap: wrap;
-    padding: 70px 0;
+    padding: 10px 0;
     margin: 0 auto;
 }
+
+.diferenciais-plano{
+        border-radius: 2px;
+        outline: 2px solid gray;
+        outline-width: 46%;
+        width: 46%;
+        margin: 10px 0;
+        margin-right: 2%;
+        margin-left: 2%;
+        padding: 25px 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s;
+}
+
+.diferenciais-plano h2{
+    text-transform: uppercase;
+}
+
+.diferenciais-plano .text_plano{
+    width: 100%;
+    text-align: center;
+}
+
+.diferenciais-plano .preco_plano{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.select_plano {
+    margin-top: 50px;
+}
+
+.diferencial-plano{
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+
 
 .main_pag{
  
